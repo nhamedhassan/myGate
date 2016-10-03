@@ -1,0 +1,560 @@
+/**********************by karim***********************************/
+header {
+ 
+    height: 128px;
+    padding-top: 15px;
+
+}
+.navbar-inverse{
+
+    border:none;
+}
+.navbar-header{
+left: 0px !important; -webkit-transition: all .4s ease;
+    transition: all .4s ease;}
+.slide-active .navbar-header{left:80% !important; -webkit-transition: all .4s ease;
+    transition: all .4s ease;}
+.border-top{
+  border-bottom: 2px solid #f4f4f4;
+  padding-bottom:0px; margin-bottom: 0px 
+
+}
+.navbar.top_menu .navbar-nav>li>a{
+
+        color: #d6296e;
+
+}
+.top_menu .navbar-nav{
+
+    float: right;
+    margin-top:10px 
+}
+.open>.topMenu {
+    position: fixed;
+    width: 75%;
+  background:transparent;
+    margin: 0 auto;
+    left: 6%;
+        box-shadow: none;
+    border: 0px;
+  
+    padding-left: 61px;
+        top: 87px;
+}
+
+.open>.topMenu.dropdown-menu>li>a{
+
+    padding: 4px 12px;
+    color:#49729d;
+    font-size:16px 
+}
+
+ .navbar-inverse .navbar-nav > .active > a {
+        background: none;
+        color: #B7A825;
+    }
+.open>.topMenu.nav-down{
+    transition: top 0.2s ease-in;
+}
+   .open>.topMenu.nav-up {
+    top: -40px;
+      transition: top 0.2s ease-in-out;
+}
+
+.top_menu li.dropdown{ width: auto; transition: top 0.2s ease-in-out; text-align:center 
+  }
+
+.top_menu .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus{
+ background:transparent;
+
+}
+
+
+
+.top_menu .navbar-nav>li>a{
+    color: #d02b6e !important;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+       
+ }
+ .navbar-inverse .navbar-nav>li>a:hover{ color: #ff438f}
+
+.top_menu .navbar-nav li.open > a{  font-weight: bold;  color: #d02b6e;
+   
+    
+ }
+.top_menu .navbar-nav li.open > a:hover{ font-weight: bold ;color: #9c1046 ; }
+
+.top_menu .navbar-nav>li>a i{ display: none }
+
+.top_menu .navbar-nav li.open > a i{top: -4px;
+    position: relative; display: block;}
+
+.navbar-inverse .navbar-toggle .icon-bar{  background-color: #b01264;}
+
+.icon-top-user{ float: right;
+    margin-top: 1px !important;
+    margin-left: 14px !important;
+    width: 30px!important }
+
+.icon-top-user img {
+  max-width: 100%;
+    height: auto;
+    border: 0 none;
+    border-radius: 1000px;
+}
+
+.icon-top-user .caret{     top: -14px!important;
+    left: -10px;}
+.searchSet {
+    margin: 10px 10px 0 10px;
+    float: right;
+}
+/* adjust body when menu is open */
+body.slide-active {
+    overflow-x: hidden
+}
+/*first child of #page-content so it doesn't shift around*/
+.no-margin-top {
+    margin-top: 0px!important
+}
+/*wrap the entire page content but not nav inside this div if not a fixed top, don't add any top padding */
+#page-content {
+    position: relative;
+    padding-top: 70px;
+    left: 0;
+}
+#page-content.slide-active {
+    padding-top: 0
+}
+/* put toggle bars on the left :: not using button */
+#slide-nav .navbar-toggle {
+    cursor: pointer;
+    position: relative;
+    line-height: 0;
+    float: left;
+    margin: 0;
+    width: 30px;
+    height: 40px;
+    padding: 17px 0 0 0;
+    border: 0;
+    background: transparent;
+  -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+
+}
+
+
+
+/* icon bar prettyup - optional */
+#slide-nav .navbar-toggle > .icon-bar {
+    width: 100%;
+    display: block;
+    height: 3px;
+    margin: 5px 0 0 0;
+}
+#slide-nav .navbar-toggle.slide-active .icon-bar {
+    background: orange
+}
+.navbar-header {
+    position: relative; 
+}
+/* un fix the navbar when active so that all the menu items are accessible */
+.navbar.navbar-fixed-top.slide-active {
+    position: relative
+}
+.dash{color: #712c81; 
+    width: 41px;}
+.color-icon-top a{color: #712c81;}
+..icon{    margin: 0 5px;}
+.dash .caret{
+   margin-left: 0px;
+    top: -5px;
+    position: relative;
+}
+.dash .fa-2x{ font-size: 22px }
+.icon {
+    margin: 0 0px;}
+.top_menu .input-group-btn:last-child>.btn{height: 32px}
+.top_menu .btn-default {
+    color: #FFFFFF;
+    background-color: #712c81;
+    border-color: #712c81;
+}
+.dash .dropdown-menu{     margin: 10px 0px 0px 0px;
+    background-color:#fff;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #d8dee4;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.1);
+min-width: 209px;
+display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    margin-top: 40px !important;
+        right: 0;
+    left: inherit;
+     }
+
+.dash .dropdown-menu>li a{
+text-align: right;
+padding:8px 8px 8px 0px;    border-bottom: 1px solid #F3F3F3;
+
+
+}
+.color-icon-top .open .dropdown-menu{
+
+   
+      visibility: visible;
+    opacity: 1;
+    margin-top: 10px !important;
+   
+}
+
+
+.dash .dropdown-menu:after {
+    position: absolute;
+    top: -7px;
+    left: 10px;
+    right: auto;
+    display: inline-block !important;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #fff;
+    border-left: 7px solid transparent;
+    content: '';
+    right: 17px;
+    left: auto;
+}
+
+
+.dash .dropdown-menu:before {
+    position: absolute;
+    top: -8px;
+    left: 9px;
+    right: auto;
+    display: inline-block !important;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #d8dee4;
+    border-left: 8px solid transparent;
+    content: '';
+    right: 16px;
+    left: auto;
+
+}
+.task-icon.badge {
+       height: 21px;
+    width: 21px;
+    display: block;
+    float: right;
+    position: relative;
+    padding-top: 12px;
+    -webkit-border-radius: 12px !important;
+    -moz-border-radius: 12px !important;
+    border-radius: 12px !important;
+    border-radius: 0px;
+    font-weight: 300;
+    font-size: 11px !important;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 11px;
+    padding: 5px 9px 3px 5px;
+    text-shadow: none !important;
+    background: #712c81;
+    margin-left: 8px;}
+
+.icon > span{right: 9px;padding:2px 7px 2px 7px}
+/* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
+
+
+
+
+@media (max-width:992px) { 
+header{
+
+
+    height: auto ; padding-top:0px
+}
+
+     header .stc_logo {/*width:100%*/;text-align:center;
+    background-position:center center;margin: 0 auto;
+    float: inherit;    background-size: 79%;}
+
+.navbar-header {
+  float: none;
+}
+.navbar-toggle {
+  display: block;
+}
+.navbar-collapse.collapse {
+  display: none!important;
+}
+.navbar-nav {
+  float: none!important;
+}
+.navbar-nav>li {
+  float: none;
+}
+.navbar-collapse.collapse.in{
+  display:block !important;
+}
+
+
+    #slide-nav .container {
+        margin: 0;
+        padding: 0!important;
+    }
+    #slide-nav .navbar-header {
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    #slide-nav .navbar.slide-active {
+        position: absolute;
+        width: 80%;
+        top: -1px;
+        z-index: 1000;
+    }
+    #slide-nav #slidemenu {
+        background: #f7f7f7;
+        left: -100%;
+        width: 80%;
+        min-width: 0;
+        position: absolute;
+        padding-left: 0;
+        z-index: 2;
+        top: -8px;
+        margin: 0;
+    }
+    #slide-nav #slidemenu .navbar-nav {
+        min-width: 0;
+    width: 95%;
+    margin: 0;
+    margin-left: 13px;
+    margin-top: 30px;
+    }
+    #slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
+      min-width: 0;
+   
+    white-space: normal;
+    color: #da9db5;
+    font-weight: normal;
+        text-align: left;
+    padding-left: 40px;
+    }
+    #slide-nav {
+        border-top: 0
+    }
+    #slide-nav.navbar-inverse #slidemenu {
+        background: #712C81
+    }
+    /* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
+    #slide-nav #navbar-height-col {
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 80%;
+        left: -80%;
+        background: #712C81;
+    }
+    #slide-nav.navbar-inverse #navbar-height-col {
+        background: #712C81;
+        z-index: 1;
+        border: 0;
+    }
+    #slide-nav .navbar-form {
+           width: 99%;
+    margin:0px;
+    text-align: center;
+    overflow: hidden;
+    background: transparent;
+    padding: 0px;
+    border:none;
+    box-shadow: none;
+    }
+    #slide-nav .navbar-form .form-control {
+        text-align: center
+    }
+    #slide-nav .navbar-form .btn {
+        width: 100%
+    }
+    .icon-notfi{
+
+            position: fixed;
+    right: 15px;-webkit-transition: all .25s linear;
+        transition: all .25s linear;
+        top:20px;
+    }
+    .icon2 span{ right: -5px }
+.slide-active  .icon-notfi{
+   right: -150px;  -webkit-transition: all .25s linear;
+        transition: all .25s linear;
+
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin: 0 auto;
+}
+  .navbar-nav > li:hover {
+                background: #541563;
+            }
+
+            .top_menu .navbar-nav>li>a {
+                padding-left: 27px;
+                font: 14px 'pt_sansregular',"Arial","Helvetica",sans-serif !important;
+                display: block;
+                color: #fff !important;
+                padding: 12px 0px 12px 37px;
+                text-align: left;
+                 border-bottom: 1px solid #5b2468;
+            }
+
+                .navbar-nav > li a:before {
+                    content: "\f061";
+                    position: absolute;
+                    top: 13px;
+                    left: 10px;
+                    color: #fff;
+                    font-size: 13px;
+                    font-family: 'FontAwesome';
+                }
+
+                  .navbar-nav > li ul li a:before {
+                    position: relative;
+                        top: -3px;
+                        left: -7px;
+                       
+                        font-size: 10px;
+                      
+                        font-weight: normal !important;
+                }
+
+.navbar-nav .open .dropdown-menu {
+  
+   background-color: #481354;
+    border-top: 1px solid #712c81;
+
+}
+
+   .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+        background: #844477;
+    }
+
+    .open>.topMenu {
+ padding-left: 0px;
+    min-width: inherit;
+    position: relative;
+    top: 0px;
+    float: none;}
+
+.searchSet ,.iconSet2,.icon3,.icon1,.dashline{ display: none }
+.icon {
+    margin: 0 4px;}
+  .border-top{border:none;}
+
+ .open>.topMenu.nav-up {
+    top: -40px;
+ }
+
+ .icon-scroll.nav-up{
+top: -40px;
+
+ }
+
+.top_menu .navbar-nav li.open > a i{ display: none }
+
+.teamCardData {
+    padding-left: 0px !important;
+}
+
+.padd-top {
+    padding-bottom: 20px;
+}
+
+
+
+
+}
+
+
+@media (max-width:668px) { 
+ 
+.kudous-ab{
+    position: absolute;
+    right:0px;
+    top: -106px;
+    -webkit-transition: all .25s linear;
+        transition: all .25s linear;
+    }
+
+
+}
+
+
+@media (min-width:768px) and (max-width:1024px) {
+
+
+
+.open>.topMenu{ width: 100%;left: 0%; }
+  }
+
+
+
+}
+
+
+/***************By karim SCT Employess *********************/
+
+.profile-Pic img{
+
+        margin-bottom: 10px ;
+}
+
+.emp_cont{height: auto ; overflow: inherit ;}
+.emp_cont .cont{
+    overflow: hidden ;
+    padding-bottom: 25px;
+    border: solid 1px #dce3e8;
+        padding-top: 10px;
+
+}
+
+.emp_cont.has_childs:before, .emp_cont.has_childs:after{
+
+    height: 100%;
+    border: solid 1px #dce3e8;
+}
+
+.teamCardData {
+    
+    padding-left: 10px;}
+
+    .padd-top{ padding-bottom:10px }
+
+    .team_bottom{ 
+        position:inherit; 
+     left:inherit;
+ bottom:inherit;
+}
+
+    .btn-training{margin-top: 45px}
+
+    .clr_p {
+    margin-left: 7px!important;
+    margin-bottom: 0px !important;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 19px;
+}

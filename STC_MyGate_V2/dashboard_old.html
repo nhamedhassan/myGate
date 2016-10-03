@@ -1,0 +1,1204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>MyGate Dashboard</title>
+<link rel="stylesheet" href="css/datatables.css">
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="stylesheet" href="css/simple-line-icons.css"/>
+
+<link rel="stylesheet" href="css/animate.css"/>
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/owl.theme.css">
+<link rel="stylesheet" href="css/ion.rangeSlider.css"/>
+<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css"/>
+<link rel="stylesheet" href="css/main.css"/>
+<link rel="stylesheet" href="css/samak_css.css"/>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="js/datatables.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+
+<!-- ION Range slider -->
+<script src="js/ion.rangeSlider.min.js" type="text/javascript"></script>
+
+<!--Gauge charts  -->
+<script src="js/gauge.min.js" type="text/javascript"></script>
+<script src="js/gauge_charts.js" type="text/javascript"></script>
+<!-- animation -->
+<script type="text/javascript" src="js/jquery.inview.js"></script>
+
+
+<!-- full calendar -->
+<link href='css/fullcalendar.css' rel='stylesheet' />
+<script src='js/moment.min.js'></script>
+<script src='js/fullcalendar.js'></script>
+
+<!-- bootstrap tagging system -->
+<script src="js/bootstrap-tag-cloud.js" type="text/javascript"></script>
+<link href='css/bootstrap-tag-cloud.css' rel='stylesheet' />
+
+<!-- timeline scripts -->
+<script src="js/vendor/moment.min.js"></script>
+<script src="js/knockout.js"></script>
+<script src=js/jquery.scrollTo.min.js"></script>
+<script src="js/app.js"></script>
+
+
+
+<!-- Common script file -->
+<script src="js/scripts.js" type="text/javascript"></script>
+
+
+</head>
+<body>
+<header class="animated"  data-animation="fadeInUp">
+    <div class="main_content">
+        <div class="row">
+            <div class="col-lg-2"><a href="http://www.stc.com.sa" class="stc_logo">STC</a></div>
+        </div>
+    </div>
+</header>
+<header class="main_menu animated"  data-animation="fadeInUp">
+    <div class="row main_content">
+        <div class="col-lg-12">
+            <nav class="navbar navbar-default top_menu animated fadeIn ">
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#"><span class="glyphicon glyphicon-th-large"
+                                                             aria-hidden="true"></span>Dashboard</a></li>
+                        <li><a href="#">Store</a></li>
+                        <li><a href="#">Help & Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- /.navbar-collapse -->
+
+                <!-- /.container-fluid -->
+
+            </nav>
+        </div>
+        <!-- Select Account and service number settings -->
+
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9 col-md-9">
+            <div class="white_bg removeScroll">
+            <div class="row animated"  data-animation="fadeInUp">
+               <div class="col-lg-12 inner_padding event_calendar_cont">
+                   <div class="event_calendar" id="event_calendar"></div>
+
+
+               </div>
+                <br class="clr"/>
+            </div>
+
+            <div class="row top_bottom_brdr animated"  data-animation="fadeInUp">
+
+                <div class="col-lg-12">
+                <div class="owl-carousel charts_carousel brdr-seprators">
+                    <div class="item left_brdr">
+                        <div class="row">
+                            <div class="col-xs-10">
+                                <h3>Vacation Days <span>On leave</span> </h3>
+                            </div>
+                            <div class="col-xs-2">
+                                <span class="widget_status vacation"><i class="fa fa-plane" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                        
+
+                        <div class="chart_cont">
+                            <canvas  id="gauge_chart" class="gauge_charts" data-value="17" data-max="22" data-unit="Days" data-icon=""></canvas>
+                        </div>
+                        <h4 class="hints error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>13 days are expiring soon</h4>
+                        <a href="#" class="btn btn-Tertiary full_width_btn bottom_position_btn" >Plan Your vacation</a>
+                    </div>
+                    <div class="item left_brdr" >
+
+                        <div class="row">
+                            <div class="col-xs-10">
+                                <h3>Time worked this week</h3>
+                            </div>
+                            <div class="col-xs-2"> </div>
+                        </div>
+                        <div class="chart_cont">
+                            <canvas  id="gauge_chart_2" class="gauge_charts" data-value="26" data-max="40" data-unit="Hours" data-icon="fa-clock-o"></canvas>
+                        </div>
+                        <h4 class="hints error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 13 days are expiring soon. <a href="#">Justify now</a></h4>
+                        <a href="#" class="btn btn-Tertiary full_width_btn bottom_position_btn" >View your timesheet</a>
+                    </div>
+                    <div class="item left_brdr" >
+                        <div class="row">
+                            <div class="col-xs-10">
+                                <h3>Kudos</h3>
+                            </div>
+                            <div class="col-xs-2">
+                                <span class="widget_status info"><i class="fa fa-info" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="row kudos">
+                            <div class="col-xs-6">
+
+                                <span class="fa fa-thumbs-up gradient_icon  font_0 kudos_icon">
+                            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            </span>
+
+                            </div>
+                            <div class="col-xs-6">
+                                <h2>38</h2>
+                                <h4>Kudos</h4>
+                            </div>
+                            <br class="clr"/>
+                            <h5>last kudos was from Khaled A.</h5>
+
+                        </div>
+                        <a href="#" class="btn btn-Tertiary full_width_btn bottom_position_btn" >Who gave you Kudos</a>
+
+
+                    </div>
+                </div>
+
+                </div>
+                <br class="clr"/>
+            </div>
+
+            <div class="row brdr-seprators  animated "  data-animation="fadeInUp">
+                <div class="col-lg-6 left_brdr inbox_height inner_padding">
+
+                    <div class="row">
+                        <div class="col-xs-10">
+                            <div class="col-xs-4"> <h3><a href="#">Inbox</a> <span class="inbox_count">10</span></h3></div>
+                            <div class="col-xs-8">
+                                <div class="dropdown">
+
+                                <button class="dropdown_results dropdown-toggle no_border" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
+
+                                    iGate inbx &nbsp;&nbsp;
+
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">other inbox</a></li>
+                                </ul>
+                            </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-xs-2">
+                        </div>
+                    </div>
+
+                    <div class="inbox_items">
+                        <div class="inbox_item animated"  data-animation="fadeInUp">
+
+                            <div class="request_status alert alert-success hidden">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <span>Request Accepted</span>
+                            </div>
+                            <div class="col-xs-8">
+                                <h3><span class="inbox_title bold">Vacation request</span> by <span class="requester_name bold">Yousef Shanti</span> | <span class="request_date">12/04/2016</span></h3>
+
+                            </div>
+
+                            <div class="col-xs-4">
+                                <a tabindex="0" class="btn btn-inbox-info" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="Annual leave for 10 days" data-placement="bottom">
+                                    <i class="icon-speech icons"></i>
+                                </a>
+
+                                <a type="button" class="btn  btn-inbox-info" data-toggle="modal" data-target=".attachment_modal">
+                                    <i class="icon-paper-clip icons"></i>
+                                </a>
+                                <span class="actions_btns ">
+                                <button type="button" class="btn btn-default btn-inbox-actions done">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions error ">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions more ">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </button>
+
+                                </span>
+                            </div>
+                        </div>
+                        <div class="inbox_item animated"  data-animation="fadeInUp">
+
+                            <div class="request_status alert alert-success hidden">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <span>Request Accepted</span>
+                            </div>
+                            <div class="col-xs-8">
+                                <h3><span class="inbox_title bold">Lateness request</span> by <span class="requester_name bold">Yousef Shanti</span> | <span class="request_date">12/04/2016</span></h3>
+
+                            </div>
+
+                            <div class="col-xs-4">
+                                <a tabindex="0" class="btn btn-inbox-info" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="Annual leave for 10 days" data-placement="bottom">
+                                    <i class="icon-speech icons"></i>
+                                </a>
+
+                                <a type="button" class="btn  btn-inbox-info" data-toggle="modal" data-target=".attachment_modal">
+                                    <i class="icon-paper-clip icons"></i>
+                                </a>
+                                <span class="actions_btns ">
+                                <button type="button" class="btn btn-default btn-inbox-actions done">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions error ">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions more ">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </button>
+
+                                </span>
+                            </div>
+                        </div>
+                        <div class="inbox_item animated"  data-animation="fadeInUp">
+
+                            <div class="request_status alert alert-success hidden">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <span>Request Accepted</span>
+                            </div>
+                            <div class="col-xs-8">
+                                <h3><span class="inbox_title bold">Vacation request</span> by <span class="requester_name bold">Camil Abi Khalil</span> | <span class="request_date">12/04/2016</span></h3>
+
+                            </div>
+
+                            <div class="col-xs-4">
+                                <a tabindex="0" class="btn btn-inbox-info" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="Annual leave for 10 days" data-placement="bottom">
+                                    <i class="icon-speech icons"></i>
+                                </a>
+
+                                <a type="button" class="btn  btn-inbox-info" data-toggle="modal" data-target=".attachment_modal">
+                                    <i class="icon-paper-clip icons"></i>
+                                </a>
+                                <span class="actions_btns ">
+                                <button type="button" class="btn btn-default btn-inbox-actions done">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions error ">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions more ">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </button>
+
+                                </span>
+                            </div>
+                        </div>
+                        <div class="inbox_item animated"  data-animation="fadeInUp">
+
+                            <div class="request_status alert alert-success hidden">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <span>Request Accepted</span>
+                            </div>
+                            <div class="col-xs-8">
+                                <h3><span class="inbox_title bold">Vacation request</span> by <span class="requester_name bold">Yousef Shanti</span> | <span class="request_date">12/04/2016</span></h3>
+
+                            </div>
+
+                            <div class="col-xs-4">
+                                <a tabindex="0" class="btn btn-inbox-info" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="Annual leave for 10 days" data-placement="bottom">
+                                    <i class="icon-speech icons"></i>
+                                </a>
+
+                                <a type="button" class="btn  btn-inbox-info" data-toggle="modal" data-target=".attachment_modal">
+                                    <i class="icon-paper-clip icons"></i>
+                                </a>
+                                <span class="actions_btns ">
+                                <button type="button" class="btn btn-default btn-inbox-actions done">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions error ">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions more ">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </button>
+
+                                </span>
+                            </div>
+                        </div>
+                        <div class="inbox_item animated"  data-animation="fadeInUp">
+
+                            <div class="request_status alert alert-success hidden">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <span>Request Accepted</span>
+                            </div>
+                            <div class="col-xs-8">
+                                <h3><span class="inbox_title bold">Vacation request</span> by <span class="requester_name bold">Yousef Shanti</span> | <span class="request_date">12/04/2016</span></h3>
+
+                            </div>
+
+                            <div class="col-xs-4">
+                                <a tabindex="0" class="btn btn-inbox-info" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="Annual leave for 10 days" data-placement="bottom">
+                                    <i class="icon-speech icons"></i>
+                                </a>
+
+                                <a type="button" class="btn  btn-inbox-info" data-toggle="modal" data-target=".attachment_modal">
+                                    <i class="icon-paper-clip icons"></i>
+                                </a>
+                                <span class="actions_btns ">
+                                <button type="button" class="btn btn-default btn-inbox-actions done">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions error ">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions more ">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </button>
+
+                                </span>
+                            </div>
+                        </div>
+                        <div class="inbox_item animated"  data-animation="fadeInUp">
+
+                            <div class="request_status alert alert-success hidden">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <span>Request Accepted</span>
+                            </div>
+                            <div class="col-xs-8">
+                                <h3><span class="inbox_title bold">Vacation request</span> by <span class="requester_name bold">Yousef Shanti</span> | <span class="request_date">12/04/2016</span></h3>
+
+                            </div>
+
+                            <div class="col-xs-4">
+                                <a tabindex="0" class="btn btn-inbox-info" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="Annual leave for 10 days" data-placement="bottom">
+                                    <i class="icon-speech icons"></i>
+                                </a>
+
+                                <a type="button" class="btn  btn-inbox-info" data-toggle="modal" data-target=".attachment_modal">
+                                    <i class="icon-paper-clip icons"></i>
+                                </a>
+                                <span class="actions_btns ">
+                                <button type="button" class="btn btn-default btn-inbox-actions done">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions error ">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions more ">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </button>
+
+                                </span>
+                            </div>
+                        </div>
+                        <div class="inbox_item animated"  data-animation="fadeInUp">
+
+                            <div class="request_status alert alert-success hidden">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <span>Request Accepted</span>
+                            </div>
+                            <div class="col-xs-8">
+                                <h3><span class="inbox_title bold">Vacation request</span> by <span class="requester_name bold">Yousef Shanti</span> | <span class="request_date">12/04/2016</span></h3>
+
+                            </div>
+
+                            <div class="col-xs-4">
+                                <a tabindex="0" class="btn btn-inbox-info" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="Annual leave for 10 days" data-placement="bottom">
+                                    <i class="icon-speech icons"></i>
+                                </a>
+
+                                <a type="button" class="btn  btn-inbox-info" data-toggle="modal" data-target=".attachment_modal">
+                                    <i class="icon-paper-clip icons"></i>
+                                </a>
+                                <span class="actions_btns ">
+                                <button type="button" class="btn btn-default btn-inbox-actions done">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions error ">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions more ">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </button>
+
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="inbox_item animated"  data-animation="fadeInUp">
+
+                            <div class="request_status alert alert-success hidden">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <span>Request Accepted</span>
+                            </div>
+                            <div class="col-xs-8">
+                                <h3><span class="inbox_title bold">Vacation request</span> by <span class="requester_name bold">Yousef Shanti</span> | <span class="request_date">12/04/2016</span></h3>
+
+                            </div>
+
+                            <div class="col-xs-4">
+                                <a tabindex="0" class="btn btn-inbox-info" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="Annual leave for 10 days" data-placement="bottom">
+                                    <i class="icon-speech icons"></i>
+                                </a>
+
+                                <a type="button" class="btn  btn-inbox-info" data-toggle="modal" data-target=".attachment_modal">
+                                    <i class="icon-paper-clip icons"></i>
+                                </a>
+                                <span class="actions_btns ">
+                                <button type="button" class="btn btn-default btn-inbox-actions done">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions error ">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions more ">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </button>
+
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="inbox_item animated"  data-animation="fadeInUp">
+
+                            <div class="request_status alert alert-success hidden">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <span>Request Accepted</span>
+                            </div>
+                            <div class="col-xs-8">
+                                <h3><span class="inbox_title bold">Vacation request</span> by <span class="requester_name bold">Yousef Shanti</span> | <span class="request_date">12/04/2016</span></h3>
+
+                            </div>
+
+                            <div class="col-xs-4">
+                                <a tabindex="0" class="btn btn-inbox-info" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="Annual leave for 10 days" data-placement="bottom">
+                                    <i class="icon-speech icons"></i>
+                                </a>
+
+                                <a type="button" class="btn  btn-inbox-info" data-toggle="modal" data-target=".attachment_modal">
+                                    <i class="icon-paper-clip icons"></i>
+                                </a>
+                                <span class="actions_btns ">
+                                <button type="button" class="btn btn-default btn-inbox-actions done">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions error ">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions more ">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </button>
+
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="inbox_item animated"  data-animation="fadeInUp">
+
+                            <div class="request_status alert alert-success hidden">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <span>Request Accepted</span>
+                            </div>
+                            <div class="col-xs-8">
+                                <h3><span class="inbox_title bold">Vacation request</span> by <span class="requester_name bold">Yousef Shanti</span> | <span class="request_date">12/04/2016</span></h3>
+
+                            </div>
+
+                            <div class="col-xs-4">
+                                <a tabindex="0" class="btn btn-inbox-info" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="Annual leave for 10 days" data-placement="bottom">
+                                    <i class="icon-speech icons"></i>
+                                </a>
+
+                                <a type="button" class="btn  btn-inbox-info" data-toggle="modal" data-target=".attachment_modal">
+                                    <i class="icon-paper-clip icons"></i>
+                                </a>
+                                <span class="actions_btns ">
+                                <button type="button" class="btn btn-default btn-inbox-actions done">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions error ">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-inbox-actions more ">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </button>
+
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info no-results hidden">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                            No More items in your inbox
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-6 left_brdr inbox_height inner_padding">
+                    <div class="row">
+                        <div class="col-xs-10">
+                            <h3>Training</h3>
+                        </div>
+                        <div class="col-xs-2">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <ul class="training_ul">
+                   <span class="border">
+
+                       <dt class="fa done animated" data-animation="fadeInUp">
+
+                               <div class="row">
+                                   <div class="col-lg-12">
+                                       <h3>Excel Spreadsheets</h3>
+                                       <h5><span class="training_date">25, April</span> 2015 | <a href="#" data-toggle="modal" data-target=".certificate_modal">View Certificate</a> </h5>
+
+                                   </div>
+
+                               </div>
+
+                       </dt>
+                       <dt class="fa in_progress animated" data-animation="fadeInUp">
+
+                               <div class="row">
+                                   <div class="col-lg-12">
+                                       <h3>Communication Skills</h3>
+                                       <h5><span class="training_date">25, April</span> 2015 | <span class="remining_days">4 days left</span> </h5>
+
+                                   </div>
+
+                               </div>
+
+                       </dt>
+                       <dt class="fa  animated" data-animation="fadeInUp">
+
+                               <div class="row">
+                                   <div class="col-lg-12">
+                                       <h3>Presenting a winning pitch</h3>
+                                       <h5><span class="training_date">25, April</span> 2015 | <span class="remining_days">Start in 5 days</span> | <a href="#">Register now</a> </h5>
+                                   </div>
+
+                               </div>
+
+                       </dt>
+                       <dt class="fa done animated" data-animation="fadeInUp">
+
+                               <div class="row">
+                                   <div class="col-lg-12">
+                                       <h3>Excel Spreadsheets</h3>
+                                       <h5><span class="training_date">25, April</span> 2015 | <a href="#" data-toggle="modal" data-target=".certificate_modal">View Certificate</a> </h5>
+
+                                   </div>
+
+                               </div>
+
+                       </dt>
+                       <dt class="fa done animated" data-animation="fadeInUp">
+
+                               <div class="row">
+                                   <div class="col-lg-12">
+                                       <h3>Excel Spreadsheets</h3>
+                                       <h5><span class="training_date">25, April</span> 2015 | <a href="#" data-toggle="modal" data-target=".certificate_modal">View Certificate</a> </h5>
+
+                                   </div>
+
+                               </div>
+
+                       </dt>
+
+
+
+                   </span>
+
+                        </ul>
+
+                    </div>
+                </div>
+               
+            </div>
+
+             <div class="row brdr-seprators top_bottom_brdr animated "  data-animation="fadeInUp">
+                    <div class="col-lg-4 left_brdr kpi_height inner_padding">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="col-xs-6"> <h3>Attendance </h3></div>
+                                <div class="col-xs-6">
+                                    <div class="dropdown">
+
+                                        <button class="dropdown_results dropdown-toggle no_border" type="button" id="attendance" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+
+                                            This Week &nbsp;&nbsp;
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="attendance">
+                                            <li><a href="#">Last Week</a></li>
+                                            <li><a href="#">This Month</a></li>
+                                            <li><a href="#">Last Month</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="progressbars">
+                            <div class="row top-margin-30">
+                                <div class="col-xs-7">
+                                    <h2 class="percentage success">75%</h2>
+                                    <h5>Punctuality</h5>
+                                </div>
+                                <div class="col-xs-5">
+                                    <div class="row">
+                                    <div class="col-xs-2">
+
+                                        <div class="progress progress-bar-vertical">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                <span class="sr-only">100% </span>
+                                            </div>
+
+                                        </div>
+                                        <h3>S</h3>
+
+                                    </div>
+                                    <div class="col-xs-2">
+
+                                        <div class="progress progress-bar-vertical">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                <span class="sr-only">75%</span>
+                                            </div>
+
+                                        </div>
+                                        <h3>M</h3>
+
+                                    </div>
+                                    <div class="col-xs-2">
+
+                                        <div class="progress progress-bar-vertical">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                                <span class="sr-only">90%</span>
+                                            </div>
+
+                                        </div>
+                                        <h3>T</h3>
+
+                                    </div>
+                                    <div class="col-xs-2">
+
+                                        <div class="progress progress-bar-vertical">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                <span class="sr-only">100%</span>
+                                            </div>
+
+                                        </div>
+                                        <h3>W</h3>
+
+                                    </div>
+                                    <div class="col-xs-2">
+
+                                        <div class="progress progress-bar-vertical">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                <span class="sr-only">25%</span>
+                                            </div>
+
+                                        </div>
+                                        <h3>T</h3>
+
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 left_brdr kpi_height inner_padding">
+                        <div class="row">
+                            <div class="col-xs-10">
+                                <h3>Objectives/ KPI</h3>
+                            </div>
+                            <div class="col-xs-2">
+                                <span class="widget_actions add"><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></span>
+                            </div>
+                        </div>
+
+                        <div class="progressbars top-margin-20">
+                            <div class="row animated "  data-animation="fadeInUp">
+                                <div class="col-xs-4">
+                                    <h3 class="gray small" >160 Hours</h3>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                            30 days left
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <h5>70%</h5>
+                                </div>
+                            </div>
+                            <div class="row animated "  data-animation="fadeInUp">
+                                <div class="col-xs-4">
+                                    <h3 class="gray small" >No Lateness</h3>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <h5>25%</h5>
+                                </div>
+                            </div>
+
+                            <div class="row animated "  data-animation="fadeInUp">
+                                <div class="col-xs-4">
+                                    <h3 class="gray small" >50 Kudos</h3>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <h5>35%</h5>
+                                </div>
+                            </div>
+
+                            <div class="row animated "  data-animation="fadeInUp">
+                                <div class="col-xs-4">
+                                    <h3 class="gray small" >160 Hours</h3>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <h5>35%</h5>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 left_brdr kpi_height inner_padding">
+                        <div class="row">
+                            <div class="col-xs-10">
+                                <h3>Reminders</h3>
+                            </div>
+                            <div class="col-xs-2">
+                                <span class="widget_actions add"><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></span>
+                            </div>
+                        </div>
+                        <div class="reminders">
+                            <div class="row">
+                                <div class="col-xs-1">
+                                    <i class="fa fa-clock-o pink" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-xs-11">
+                                    <h3 class="gray small bold stc-bold no-vertical-margin">Goto HR to Receive ID Letter </h3>
+                                    <h5 class="hint">today at 8:00am</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">
+                                    <i class="fa fa-birthday-cake pink " aria-hidden="true"></i>
+                                </div>
+                                <div class="col-xs-11">
+                                    <h3 class="gray small bold stc-bold no-vertical-margin">Ahmad's Birthday</h3>
+                                    <h5  class="hint">today at 8:00am</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">
+                                    <i class="fa fa-clock-o gray" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-xs-11">
+                                    <h3 class="gray small bold stc-bold no-vertical-margin">Send Email to Abdullah</h3>
+                                    <h5  class="hint">today at 8:00am</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+              </div>
+
+             <div class="row  animated "  data-animation="fadeInUp">
+                 <div class="col-lg-12 achievements inner_padding">
+                     <h3>Achievements</h3>
+                     <div class="row">
+
+                        <div class="col-lg-3 col-xs-6">
+                                 <div class="col-xs-6">
+                                     <img src="images/acheivement_medal.png"/>
+                                     <h3 class="gray bold small">160 Hours</h3>
+                                 </div>
+                                 <div class="col-xs-6">
+                                     <img src="images/acheivement_flag.png"/>
+                                     <h3 class="gray bold small">On Time</h3>
+                                 </div>
+                             </div>
+
+                         <div class="col-lg-3 col-xs-6">
+                             <div class="row">
+                                 <div class="col-xs-6">
+                                     <img src="images/acheivement_kudos.png"/>
+                                     <h3 class="gray bold small">50 Kudos</h3>
+                                 </div>
+                                 <div class="col-xs-6">
+                                     <img src="images/acheivement_default.png"/>
+                                     <h3 class="gray bold small">On  Spotlight</h3>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="col-lg-3 col-xs-6">
+                             <div class="row">
+                                 <div class="col-xs-6">
+                                     <img src="images/acheivement_default.png"/>
+                                     <h3 class="gray bold small">Workaholic</h3>
+                                 </div>
+                                 <div class="col-xs-6">
+                                     <img src="images/acheivement_default.png"/>
+                                     <h3 class="gray bold small">Overtimer!!</h3>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="col-lg-3 col-xs-6">
+                             <div class="row">
+                                 <div class="col-xs-6">
+                                     <img src="images/acheivement_default.png"/>
+                                     <h3 class="gray bold small">100th task</h3>
+                                 </div>
+                                 <div class="col-xs-6">
+                                     <img src="images/acheivement_default.png"/>
+                                     <h3 class="gray bold small">Clean Inbox</h3>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+                <div class="row brdr-seprators top_bottom_brdr animated "  data-animation="fadeInUp">
+                    <div class="col-lg-4 left_brdr kpi_height inner_padding">
+                        <div class="row">
+                            <div class="col-xs-10">
+                                <h3>Skills</h3>
+                            </div>
+                            <div class="col-xs-2">
+                                <span class="widget_actions add add_skill"><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="tag-success" class="input-append hidden">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Add new skill">
+                                         <span class="input-group-btn">
+                                              <button class="btn btn-primary" type="button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                          </span>
+                                </div>
+
+                            </div>
+                            <ul id="tag-cloud">
+                                <li class="tag-cloud tag-cloud-info">User Experience</li>
+                                <li class="tag-cloud tag-cloud-info">Linux</li>
+                                <li class="tag-cloud tag-cloud-info">linux 2</li>
+                                <li class="tag-cloud tag-cloud-info">Scrum Methodology</li>
+                                <li class="tag-cloud tag-cloud-info">Nodejs</li>
+                                <li class="tag-cloud tag-cloud-info">User Experience</li>
+                                <li class="tag-cloud tag-cloud-info">Linux</li>
+                                <li class="tag-cloud tag-cloud-info">linux 2</li>
+                                <li class="tag-cloud tag-cloud-info">Scrum Methodology</li>
+                                <li class="tag-cloud tag-cloud-info">Nodejs</li>
+                            </ul>
+                        </div>
+
+                        </div>
+
+                    <div class="col-lg-4 left_brdr kpi_height inner_padding">
+                        <div class="row">
+                            <div class="col-xs-10">
+                                <h3>My Timeline</h3>
+                            </div>
+                            <div class="col-xs-2">
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <ul class="training_ul mytime_line_ul">
+
+                              <div id="mytime_line" class="carousel vertical mytime_line slide" data-ride="carousel" data-interval="false">
+
+                                  <!-- Sliding images statring here -->
+                                  <div class="row">
+
+                                      <div class="col-xs-10 carousel-inner">
+                                          <span class="border">
+
+
+                                          <div class="item active">
+                                              <div class="mytime_line_item animated"  data-animation="fadeInUp">
+                                                  <div class="row">
+                                                      <div class="col-xs-10">
+                                                          <h3>Completed a course 1</h3>
+                                                          <h5>05 Mar, 2016</h5>
+                                                      </div>
+                                                      <div class="col-xs-2 no-padding">
+                                                          <img src="images/timeline_course.png"/>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <div class="mytime_line_item animated"  data-animation="fadeInUp">
+                                                  <div class="row">
+                                                      <div class="col-xs-10">
+                                                          <h3>Achieved 160 hours</h3>
+                                                          <h5>12 Apr, 2016</h5>
+                                                      </div>
+                                                      <div class="col-xs-2 no-padding">
+                                                          <img src="images/timeline_flag.png"/>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="item ">
+                                              <div class="mytime_line_item animated"  data-animation="fadeInUp">
+                                                  <div class="row">
+                                                      <div class="col-xs-10">
+                                                          <h3>Completed a course</h3>
+                                                          <h5>05 Mar, 2016</h5>
+                                                      </div>
+                                                      <div class="col-xs-2 no-padding">
+                                                          <img src="images/timeline_course.png"/>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <div class="mytime_line_item animated"  data-animation="fadeInUp">
+                                                  <div class="row">
+                                                      <div class="col-xs-10">
+                                                          <h3>Achieved 160 hours</h3>
+                                                          <h5>12 Apr, 2016</h5>
+                                                      </div>
+                                                      <div class="col-xs-2 no-padding">
+                                                          <img src="images/timeline_flag.png"/>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="item ">
+                                              <div class="mytime_line_item animated"  data-animation="fadeInUp">
+                                                  <div class="row">
+                                                      <div class="col-xs-10">
+                                                          <h3>Completed a course</h3>
+                                                          <h5>05 Mar, 2016</h5>
+                                                      </div>
+                                                      <div class="col-xs-2 no-padding">
+                                                          <img src="images/timeline_course.png"/>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <div class="mytime_line_item animated"  data-animation="fadeInUp">
+                                                  <div class="row">
+                                                      <div class="col-xs-10">
+                                                          <h3>Achieved 160 hours</h3>
+                                                          <h5>12 Apr, 2016</h5>
+                                                      </div>
+                                                      <div class="col-xs-2 no-padding">
+                                                          <img src="images/timeline_flag.png"/>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+
+</span>
+
+                                      </div>
+
+
+                                      <div class=" col-xs-2">
+                                          <div class="row timeline_nav">
+                                              <!-- Next / Previous controls here -->
+                                              <a class="left carousel-control" href="#mytime_line" data-slide="prev">
+                                                  <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                              </a>
+                                              <a class="right carousel-control" href="#mytime_line" data-slide="next">
+                                                  <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                              </a>
+                                          </div>
+
+                                          <div class="row timeline_first">
+                                              <a class="first" data-target="#mytime_line" data-slide-to="0">
+                                                  start
+                                              </a>
+                                          </div>
+
+
+
+                                      </div>
+
+                                  </div>
+
+
+
+                                  <div>
+
+                                  </div>
+                              </div>
+
+
+                            </ul>
+
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="col-lg-4 left_brdr kpi_height inner_padding">
+                        <div class="row">
+                            <div class="col-xs-10">
+                                <h3>Favorites</h3>
+                            </div>
+                            <div class="col-xs-2">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 fav_item">
+                                <div class="col-xs-1 fav_icon">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-xs-9"><h3 class="small  no-vertical-margin"><a href="#">50% discount on hotels</a></h3></div>
+                                <div class="col-xs-2">
+                                    <div class="actions_btns ">
+                                    <button type="button" class="btn btn-default btn-inbox-actions error ">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-12 fav_item">
+                                <div class="col-xs-1 fav_icon">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-xs-9"><h3 class="small  no-vertical-margin"><a href="#">Lateness Justification Request</a></h3></div>
+                                <div class="col-xs-2">
+                                    <div class="actions_btns ">
+                                        <button type="button" class="btn btn-default btn-inbox-actions error ">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-12 fav_item">
+                                <div class="col-xs-1 fav_icon">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-xs-9"><h3 class="small  no-vertical-margin"><a href="#">Objectives</a></h3></div>
+                                <div class="col-xs-2">
+                                    <div class="actions_btns ">
+                                        <button type="button" class="btn btn-default btn-inbox-actions error ">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-12">
+                                <h3 class="small"><a href="#">View all</a></h3>
+                            </div>
+
+
+                        </div>
+                    </div>
+            </div>
+
+
+                </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 sidebar">
+            <div class="white_bg">
+                <h2>Side bar</h2>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- Attachment popup -->
+<div class="modal fade  attachment_modal" tabindex="-1" role="dialog" aria-labelledby="attachement">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Attachment Preview</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row attachment_img">
+                    <img src="images/boarding_pass.png"/>
+                </div>
+
+                <a href="#" class="btn btn-Tertiary full_width_btn attachment_btn">Download Attachment - AIRBOARDINGTICKET.jpg 0.04Mb</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade  certificate_modal" tabindex="-1" role="dialog" aria-labelledby="certificate">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Certificate Preview</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row attachment_img">
+                    <img src="images/excel_certificate.png"/>
+                </div>
+
+                <a href="#" class="btn btn-Tertiary full_width_btn attachment_btn">Download Attachment - Excel_Certificate.jpg 0.04Mb</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

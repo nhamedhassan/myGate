@@ -1,0 +1,459 @@
+.ChatUI.OverlayMode {
+	height: 550px;
+	background-color: white;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	width: 350px;
+	-webkit-box-shadow: 0px 2px 10px 4px #8A8A8A;
+	box-shadow: 0px 2px 10px 4px #8A8A8A;
+	-webkit-animation: anim-jelly 0.8s linear forwards;
+	animation: anim-jelly 0.8s linear forwards;
+	border: solid 20px #544158;
+	border-radius: 20px;
+	cursor: move;
+	overflow: hidden;
+}
+
+.ChatUI.OverlayMode .transcript {
+	padding: 5px 20px;
+	box-sizing: border-box;
+	overflow-y: auto;
+	font-size: 13px;
+	line-height: 18px;
+	display: none;
+	height: 406px;
+	background: #f2f2f2;
+	cursor: default;
+}
+
+.ChatUI.OverlayMode .close {
+	display: block;
+	color: #fff;
+	line-height: 41px;
+	text-align: right;
+	height: 40px;
+	position: absolute;
+	top: 6px;
+	right: 20px;
+	-webkit-transition: opacity .22s ease-in-out;
+	-moz-transition: opacity .22s ease-in-out;
+	-o-transition: opacity .22s ease-in-out;
+	transition: opacity .22s ease-in-out;
+}
+
+.ChatUI.OverlayMode .close:hover {
+	cursor: pointer;
+	opacity: .8;
+	color: #E16595;
+}
+
+.ChatUI.OverlayMode .close:hover {
+	opacity: 1
+}
+
+.ChatUI * {
+	box-sizing: border-box
+}
+
+.ChatUI {
+	height: 100vh;
+	box-sizing: border-box;
+	width: 100%;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	position: relative
+}
+
+.ChatUI .title {
+	background-color: #4A384E;
+	width: 100%;
+	height: 49px;
+	font-size: 20px;
+	color: white;
+	padding: 13px;
+}
+
+.ChatUI .transcript {
+	padding: 5px 20px;
+	box-sizing: border-box;
+	overflow-y: auto;
+	font-size: 13px;
+	line-height: 18px;
+	display: none
+}
+
+.ChatUI .transcript p {
+	word-wrap: break-word;
+	margin: 0 0;
+	display: none;
+	box-sizing: border-box;
+	border-bottom: 1px solid #eee;
+	padding: 1em 0
+}
+
+.ChatUI .transcript p.system {
+	color: rgb(153, 153, 153);
+	float: left;
+	background: #E2E2E2;
+}
+
+.ChatUI .transcript p.system .name {
+	display: none
+}
+
+.ChatUI .transcript .name {
+	display: block;
+	font-size: 11px;
+	font-weight: bold;
+	color: #222
+}
+
+.ChatUI .transcript .them {
+	max-width: 100%;
+	width:auto;
+	text-align: left;
+	float: left;
+	clear: both;
+	font-size: 14px;
+	max-width: 350px;
+	background: #AA80B3;
+	padding: 8px 14px;
+	border-radius: 18px;
+	min-width: 0;
+	color: #fff;
+	box-shadow: -2px 2px 5px -2px rgba(0,0,0,0.3);
+	margin-bottom:5px;
+}
+
+.ChatUI .transcript .them .name {color: #4A384E;}
+
+.ChatUI .transcript .you {
+	width:auto;
+	max-width: 100%;
+	clear: both;
+	background: #fff;
+	color: #544158;
+	text-align: left;
+	box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.3);
+	border-radius:18px;
+	padding:8px 14px;
+	float: right;
+	clear: both;
+	margin-bottom: 5px;
+}
+
+.ChatUI .transcript .you .name {color: #E16595;}
+
+.ChatUI .isTyping {
+	color: #222;
+	font-size: 11px;
+	position: absolute;
+	bottom: 72px;
+	background: #e5e5e5;
+	width: 100%;
+	padding: 1em;
+	display: none
+}
+
+.ChatUI .input {
+	width: 100%;
+	height: 90%;
+	box-sizing: border-box;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border: none;
+	resize: none;
+	padding: 20px 10px;
+	overflow: auto;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	line-height: 16px;
+	background: #E16595;
+	color: #fff;
+	outline: 0;
+	z-index: 1;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.ChatUI .input::-webkit-input-placeholder {
+	color: rgba(255,255,255,0.5);
+}
+
+.ChatUI .input:-moz-placeholder { /* Firefox 18- */
+	color: rgba(255,255,255,0.5);
+}
+
+.ChatUI .input::-moz-placeholder {  /* Firefox 19+ */
+	color: rgba(255,255,255,0.5);
+}
+
+.ChatUI .input:-ms-input-placeholder {
+	color: rgba(255,255,255,0.5);
+}
+
+.ChatUI .input.disabled {
+	opacity: 0.5
+}
+
+.ChatUI .input-container {
+	height: 55px;
+	padding: 5px;
+	background: #e16595;
+	border-top: 1px solid #cccccc;
+	box-sizing: border-box;
+	display: none;
+	position: relative;
+}
+
+.ChatUI .form {
+	padding: 20px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	cursor: default;
+}
+
+.ChatUI .form .welcome {
+	width: 288.5px;
+	height: 43px;
+	margin: .5em 0 1.5em 0
+}
+
+.ChatUI .form label {
+	display: block;
+	font-size: 13px
+}
+
+.ChatUI .form label span {
+	display: inline-block;
+	margin-bottom: .4em
+}
+
+.ChatUI .form label input {
+	font-family: Helvetica, Arial, sans-serif;
+	width: 100%;
+	display: inline-block;
+	box-sizing: border-box;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border: 1px solid rgb(187, 187, 187);
+	height: 37px;
+	font-size: 14px;
+	padding: 5px;
+	margin: 0 0 1.15em 0;
+	outline: 0;
+}
+
+.ChatUI .form label input[name=email] {
+	margin-bottom: .5em
+}
+
+.ChatUI .form label input.error {
+	border-color: red
+}
+
+.ChatUI .form .submit {
+	width: 100%;
+	height: 32px;
+	box-sizing: border-box;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border: none;
+	margin-top: 11px;
+	background-color: rgb(238, 238, 238)
+}
+
+.ChatUI .form .label_disclaimer {
+	font-size: 12px;
+	line-height: 16px;
+	color: #7f7f7f;
+	margin-bottom: 1em
+}
+
+.ChatUI .form .form_disclaimer {
+	font-size: 12px;
+	line-height: 16px;
+	color: #222
+}
+
+.ChatUI .form button.submit {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	color: #fff;
+	height: 45px;
+	line-height: 45px;
+	margin-bottom: 1em;
+	background-color: #e16595;
+	-webkit-transition: background-color .22s ease-in-out;
+	-moz-transition: background-color .22s ease-in-out;
+	-o-transitionbackground-color: .22s ease-in-out;
+	transition: background-color .22s ease-in-out
+}
+
+.ChatUI .form button.submit:hover {
+	cursor: pointer;
+	background-color: #8D569A;
+}
+
+.ChatUI .end {
+	color: #fff;
+	line-height: 41px;
+	text-align: right;
+	height: 40px;
+	position: absolute;
+	top: 3px;
+	right: 17px;
+	-webkit-transition: opacity .22s ease-in-out;
+	-moz-transition: opacity .22s ease-in-out;
+	-o-transition: opacity .22s ease-in-out;
+	transition: opacity .22s ease-in-out;
+	display: none
+}
+
+.ChatUI .end:hover {
+	cursor: pointer;
+	opacity: .8;
+	color: #E16595;
+}
+
+.ChatUI .end:hover {
+	opacity: 1
+}
+
+.ChatUI .send {
+	display: none
+}
+
+.ChatUI .settings-group {
+	display: none
+}
+
+.ChatUI .transcript > p:last-child {
+	margin-bottom: 25px
+}
+
+.chat-effect-container {
+	position: absolute;
+	top: -100px;
+	width: 100%;
+}
+
+.chat-effect-bar {
+	background: #E16595;
+	top: 100px;
+	width: 98%;
+	height: 40px;
+	-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	z-index: 0;
+	position: absolute;
+}
+
+.chat-effect-dots {
+	position: absolute;
+}
+
+.chat-effect-dot {
+	background: #e16596;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+}
+
+.chat-info-container {
+	position: absolute;
+	top: -20px;
+	font-size: 12px;
+	color: #E16595;
+}
+
+.chat-info-typing {
+	position: absolute;
+	left: 80px;
+	white-space: nowrap;
+}
+.ChatUI .form label input.required{border:solid 1px #E16595}
+.ChatUI .form label span.required{color: #E16595}
+
+
+/*Post Chat Survey Classes - Added by Mohammad Samak */
+
+.survey {overflow-y: auto;height:461px;}
+.ChatUI .survey label {margin-bottom:10px;}
+.rating_sys_add{width:230px !important;}
+.radio_custom{position:relative;margin-right: 20px;}
+.radio_custom input[type="radio"]{display:none !important;}
+.radio_custom  input[type="radio"]+ label {display:inline-block; margin-right:20px;padding-left:25px;}
+.radio_custom input[type="radio"] + label:before{content:'';width:15px;height:15px;background: #f2f2f2;border: solid 1px #B5B0B0;border-radius:50%;position:absolute;left:0px;}
+.radio_custom input[type="radio"] + label:after{content:'';width: 9px;height: 9px;background: #f2f2f2;border: solid 1px #fff;border-radius:50%;position:absolute;left: 3px;top: 3px; transition:all ease-in 0.2s;}
+.radio_custom input[type="radio"]:checked + label:after{background: #db4f72; }
+.radio_custom input[type="radio"] + label:hover:after{background: #712d80; }
+.ChatUI .survey textarea {display:block;width:100%;height:60px;outline:0;}
+
+
+
+
+.rating {
+	float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that donÃ¢â‚¬â„¢t support :checked donÃ¢â‚¬â„¢t
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesnÃ¢â‚¬â„¢t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+	position:absolute;
+	top:-9999px;
+	clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+	float:right;
+	width: 1.2em;
+	padding:0 .1em;
+	overflow:hidden;
+	white-space:nowrap;
+	cursor:pointer;
+	font-size:200%;
+	line-height:1.2;
+	color: #f2f2f2;
+	transition: all ease 0.2s;
+	text-shadow: 1px 1px 1px #cccccc;
+}
+
+.rating:not(:checked) > label:before {
+	content: 'â˜…  ';
+}
+
+.rating > input:checked ~ label {
+	color: #e16595;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+	color: #aa80b3;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+	color: #aa80b3;
+}
+
+.rating > label:active {
+	position:relative;
+	top:2px;
+	left:2px;
+}
+
+
+

@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyGate Components</title>
+
+    <link rel="stylesheet" href="css/datatables.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/simple-line-icons.css"/>
+
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/ion.rangeSlider.css"/>
+    <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/samak_css.css"/>
+    <link rel="stylesheet" href="Igate-Main.css"/>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="js/datatables.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <!-- ION Range slider -->
+    <script src="js/ion.rangeSlider.min.js" type="text/javascript"></script>
+
+    <!--Gauge charts  -->
+    <script src="js/gauge.min.js" type="text/javascript"></script>
+    <script src="js/gauge_charts.js" type="text/javascript"></script>
+    <!-- animation -->
+    <script type="text/javascript" src="js/jquery.inview.js"></script>
+
+
+    <!-- full calendar -->
+    <link href='css/fullcalendar.css' rel='stylesheet'/>
+    <script src='js/moment.min.js'></script>
+    <script src='js/fullcalendar.js'></script>
+
+    <!-- bootstrap tagging system -->
+    <script src="js/bootstrap-tag-cloud.js" type="text/javascript"></script>
+    <link href='css/bootstrap-tag-cloud.css' rel='stylesheet'/>
+
+    <!-- one line calendar -->
+    <script src="js/online_cal_js.js" type="text/javascript"></script>
+
+
+    <!-- Common script file -->
+    <script src="js/scripts.js" type="text/javascript"></script>
+
+    <!-- highchart files -->
+    <script src="js/highcharts.js"></script>
+    <script src="https://code.js/exporting.js"></script>
+
+
+</head>
+<body>
+<div class="container">
+    <div class="white_bg">
+        <div class="col-lg-12">
+
+
+            <h2>Charts </h2>
+
+            <div class="chart_cont">
+                <canvas id="gauge_chart" class="gauge_charts" data-value="17" data-max="22" data-unit="Days"
+                        data-icon=""></canvas>
+
+            </div>
+            <div class="chart_cont">
+                <canvas id="gauge_chart_2" class="gauge_charts" data-value="14" data-max="22" data-unit="hours"
+                        data-icon="fa-calendar-check-o"></canvas>
+
+            </div>
+            <div class="chart_cont">
+                <canvas id="gauge_chart_3" class="gauge_charts" data-value="35" data-max="80" data-unit="min"
+                        data-icon="fa-motorcycle"></canvas>
+
+            </div>
+            <div class="chart_cont">
+                <canvas id="gauge_chart_4" class="gauge_charts" data-value="7" data-max="16" data-unit="years"
+                        data-icon="fa-calendar-check-o"></canvas>
+
+            </div>
+            <div class="chart_cont">
+                <canvas id="gauge_chart_5" class="gauge_charts" data-value="10" data-max="16" data-unit="%"
+                        data-icon="fa-calendar-check-o" data-type="circle" data-value-type="percentage"></canvas>
+
+            </div>
+            <div class="chart_cont">
+                <canvas id="gauge_chart_6" class="gauge_charts" data-value="7" data-max="16" data-unit="%"
+                        data-icon="fa-calendar-check-o" data-value-type="percentage"></canvas>
+
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="col-lg-4">
+                <div class="emp_cont">
+                    <div class="cont">
+                        samak
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="emp_cont has_childs">
+                    <div class="cont">
+                        samak
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="col-lg-12">
+            <h2>Timeline calendar</h2>
+            <button id="prev" onMouseUp="changeMonth(false)"> <<</button>
+            <button id="next" onMouseUp="changeMonth(true)"> >></button>
+            <div id="cal"></div>
+            <script>
+                var events = [
+                    {
+                        "id": "1",
+                        "title": "11-29-2013",
+                        "start": "2016-07-21 10:25:28",
+                        "end": "2016-07-30 10:25:34",
+                        "url": "",
+                        "allDay": "1",
+                        "class": "events_type_1"
+                    },
+                    {
+                        "id": "2",
+                        "title": "12-15-2013",
+                        "start": "2013-12-15 10:25:47",
+                        "end": "2016-12-16 10:25:39",
+                        "url": "",
+                        "allDay": "1",
+                        "class": "events_type_2"
+                    },
+                    {
+                        "id": "3",
+                        "title": "12-26-2013",
+                        "start": "2013-12-26 10:25:50",
+                        "end": "2016-12-27 10:25:42",
+                        "url": "",
+                        "allDay": "false",
+                        "class": "events_type_3"
+                    },
+                    {
+                        "id": "4",
+                        "title": "11-19-2013",
+                        "start": "2013-11-19 00:00:00",
+                        "end": "2013-11-23 00:00:00",
+                        "url": "",
+                        "allDay": "false",
+                        "class": "events_type_4"
+                    },
+                    {
+                        "id": "5",
+                        "title": "12-9-2013",
+                        "start": "2013-12-09 00:00:00",
+                        "end": "2013-12-11 00:00:00",
+                        "url": "event",
+                        "allDay": "false",
+                        "class": "events_type_5"
+                    },
+                    {
+                        "id": "6",
+                        "title": "12-8-2013",
+                        "start": "2013-12-08 00:00:00",
+                        "end": "2013-12-10 00:00:00",
+                        "url": "event",
+                        "allDay": "false",
+                        "class": "events_type_6"
+                    },
+                    {
+                        "id": "7",
+                        "title": "12-15-2013",
+                        "start": "2013-12-15 10:25:47",
+                        "end": "2013-12-18 10:25:39",
+                        "url": "",
+                        "allDay": "1",
+                        "class": "events_type_1"
+                    },
+                    {
+                        "id": "8",
+                        "title": "12-10-2013",
+                        "start": "2013-12-10 10:25:47",
+                        "end": "2013-12-12 10:26:39",
+                        "url": "",
+                        "allDay": "1",
+                        "class": "events_type_2"
+                    }
+                ];
+
+                var todaydate = new Date();
+                var curmonth = todaydate.getMonth() + 1; //get current month (1-12)
+                var curyear = todaydate.getFullYear(); //get current year
+                var selectedmonth = curmonth;
+                var selectedyear = curyear;
+
+                document.getElementById('cal').innerHTML = buildCal(curmonth, curyear, "main", "month", "daysofweek", "days", 1, events);
+
+                function changeMonth(direction) {
+                    if (direction) {
+                        selectedyear = ((selectedmonth + 1) > 12) ? selectedyear + 1 : selectedyear;
+                        selectedmonth = ((selectedmonth + 1) > 12) ? 1 : selectedmonth + 1;
+                    } else {
+                        selectedyear = ((selectedmonth - 1) == 0) ? selectedyear - 1 : selectedyear;
+                        selectedmonth = ((selectedmonth - 1) == 0) ? 12 : selectedmonth - 1;
+                    }
+                    document.getElementById('cal').innerHTML = buildCal(selectedmonth, selectedyear, "main", "month", "daysofweek", "days", 1, events);
+                }
+            </script>
+
+        </div>
+
+        <div class="col-lg-12">
+            <h2>Chart</h2>
+            <div id="punctionlty_chart" class="linechart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+        </div>
+
+        <div class="col-lg-12">
+            <h2>data Table</h2>
+            <div class="dt_custom_filter">
+
+                <div class="table_actions row">
+                    <div class="col-lg-2 col-xs-4 results_cont">
+                        <div class="dropdown">
+
+                            <button class="dropdown_date dropdown-toggle" type="button" id="results"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                <span>Show Results</span>
+                                <span class="">|</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a data-lenght="10">10 Results</a></li>
+                                <li><a data-lenght="20">25 Results</a></li>
+                                <li><a data-lenght="30">50 Results</a></li>
+                                <li><a data-lenght="100">100 Results</a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-xs-4 custom_filter_cont"></div>
+                    <div class="col-lg-2 col-xs-4 export_cont">
+                        <div class="dropdown">
+
+                            <button class="dropdown_date dropdown-toggle" type="button" id="export"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-floppy-o"></i>
+                                Export
+                                <span class="">|</span>
+                                <span class="caret"></span>
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-2 col-xs-4 month_cont">
+                        <div class="dropdown">
+
+                            <button class="dropdown_date dropdown-toggle" type="button" id="months"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                May 2016
+                                <span class="">|</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a data-value="10">May 2016</a></li>
+                                <li><a data-value="25">June 2016</a></li>
+                                <li><a data-value="50">July 2016</a></li>
+                                <li><a data-value="100">August 2016</a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-xs-4 search_cont">
+                        <input type="text" class="form-control search_dt" placeholder="Search employee"/>
+                    </div>
+                </div>
+                <table class="table data_table ">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Employee Name</th>
+                        <th>Total Lateness</th>
+                        <th>Total Shortness</th>
+                        <th>Occurences for lateness and shortness</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>&nbsp;</td>
+                        <td>
+                            <button type="button" class="btn btn-accept" value="Accept">
+                                <i class="fa fa-check" aria-hidden="true"></i> Accept
+                            </button>
+
+                            <button type="button" class="btn btn-reject" value="Accept">
+                                <i class="fa fa-close" aria-hidden="true"></i> Reject
+                            </button>
+
+                            <button type="button" class="btn btn-details" value="Accept">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i> Details
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>&nbsp;</td>
+                        <td>
+                            <button type="button" class="btn btn-accept" value="Accept">
+                                <i class="fa fa-check" aria-hidden="true"></i> Accept
+                            </button>
+
+                            <button type="button" class="btn btn-reject" value="Accept">
+                                <i class="fa fa-close" aria-hidden="true"></i> Reject
+                            </button>
+
+                            <button type="button" class="btn btn-details" value="Accept">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i> Details
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>&nbsp;</td>
+                        <td>
+                            <button type="button" class="btn btn-accept" value="Accept">
+                                <i class="fa fa-check" aria-hidden="true"></i> Accept
+                            </button>
+
+                            <button type="button" class="btn btn-reject" value="Accept">
+                                <i class="fa fa-close" aria-hidden="true"></i> Reject
+                            </button>
+
+                            <button type="button" class="btn btn-details" value="Accept">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i> Details
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="col-lg-12">
+            <h2>Show extra details data Table</h2>
+            <div class="dt_custom_filter">
+
+                <div class="table_actions row">
+                    <div class="col-lg-2 col-xs-4 results_cont">
+                        <div class="dropdown">
+
+                            <button class="dropdown_date dropdown-toggle" type="button" id="results"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                <span>Show Results</span>
+                                <span class="">|</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a data-lenght="10">10 Results</a></li>
+                                <li><a data-lenght="20">25 Results</a></li>
+                                <li><a data-lenght="30">50 Results</a></li>
+                                <li><a data-lenght="100">100 Results</a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-xs-4 custom_filter_cont"></div>
+                    <div class="col-lg-2 col-xs-4 export_cont">
+                        <div class="dropdown">
+
+                            <button class="dropdown_date dropdown-toggle" type="button" id="export"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-floppy-o"></i>
+                                Export
+                                <span class="">|</span>
+                                <span class="caret"></span>
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-2 col-xs-4 month_cont">
+                        <div class="dropdown">
+
+                            <button class="dropdown_date dropdown-toggle" type="button" id="months"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                May 2016
+                                <span class="">|</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a data-value="10">May 2016</a></li>
+                                <li><a data-value="25">June 2016</a></li>
+                                <li><a data-value="50">July 2016</a></li>
+                                <li><a data-value="100">August 2016</a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-xs-4 search_cont">
+                        <input type="text" class="form-control search_dt" placeholder="Search employee"/>
+                    </div>
+                </div>
+                <table class="table data_table  extra_detailed_table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Employee Name</th>
+                        <th>Total Lateness</th>
+                        <th>Total Shortness</th>
+                        <th>Occurences for lateness and shortness</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>&nbsp;</td>
+                        <td class="details-control">
+                            <button type="button" class="btn btn-accept" value="Accept">
+                                <i class="fa fa-check" aria-hidden="true"></i> Accept
+                            </button>
+
+                            <button type="button" class="btn btn-reject" value="Accept">
+                                <i class="fa fa-close" aria-hidden="true"></i> Reject
+                            </button>
+
+                            <button type="button" class="btn btn-details" value="Accept">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i> Details
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>&nbsp;</td>
+                        <td class="details-control">
+                            <button type="button" class="btn btn-accept" value="Accept">
+                                <i class="fa fa-check" aria-hidden="true"></i> Accept
+                            </button>
+
+                            <button type="button" class="btn btn-reject" value="Accept">
+                                <i class="fa fa-close" aria-hidden="true"></i> Reject
+                            </button>
+
+                            <button type="button" class="btn btn-details" value="Accept">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i> Details
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>&nbsp;</td>
+                        <td class="details-control">
+                            <button type="button" class="btn btn-accept" value="Accept">
+                                <i class="fa fa-check" aria-hidden="true"></i> Accept
+                            </button>
+
+                            <button type="button" class="btn btn-reject" value="Accept">
+                                <i class="fa fa-close" aria-hidden="true"></i> Reject
+                            </button>
+
+                            <button type="button" class="btn btn-details" value="Accept">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i> Details
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="col-lg-12 ">
+            <h2>Endorsement System </h2>
+            <div class="endorsement row">
+                <div class="col-lg-6 endorsement_item">
+                    <div class="brdr"></div>
+                    <div class="skill_name"><span class="skill_span">HTML 5</span> <a href="#" class="add_endorsement endorsed">
+                        <i class="fa fa-plus"></i><span>Endorse</span></a></div>
+                    <div class="skill_people">
+                        <ul>
+                            <li><img src="images/user_img.png"/></li>
+                            <li><img src="images/imgs.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                        </ul>
+                        <a href="#" class="more_endorsement" data-toggle="modal" data-target=".endorsement_modal">+<span
+                                class="endorsement_count">15</span> more</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 endorsement_item">
+                    <div class="brdr"></div>
+                    <div class="skill_name"><span class="skill_span">HTML 5</span> <a href="#" class="add_endorsement endorsed">
+                        <i class="fa fa-plus"></i> <span>Endorse</span></a></div>
+                    <div class="skill_people">
+                        <ul>
+                            <li><img src="images/user_img.png"/></li>
+                            <li><img src="images/imgs.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                        </ul>
+                        <a href="#" class="more_endorsement" data-toggle="modal" data-target=".endorsement_modal">+<span
+                                class="endorsement_count">15</span> more</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 endorsement_item">
+                    <div class="brdr"></div>
+                    <div class="skill_name"><span class="skill_span">HTML 5</span> <a href="#" class="add_endorsement ">
+                        <i class="fa fa-plus"></i> <span>Endorse</span></a></div>
+                    <div class="skill_people">
+                        <ul>
+                            <li><img src="images/user_img.png"/></li>
+                            <li><img src="images/imgs.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                            <li><img src="images/user_img.png"/></li>
+                            <li><img src="images/imgs.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                            <li><img src="images/user_img.png"/></li>
+                            <li><img src="images/imgs.jpg"/></li>
+
+                        </ul>
+                        <a href="#" class="more_endorsement" data-toggle="modal" data-target=".endorsement_modal">+<span
+                                class="endorsement_count">15</span> more</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 endorsement_item">
+                    <div class="brdr"></div>
+                    <div class="skill_name"><span class="skill_span">HTML 5</span> <a href="#"
+                                                                                      class="add_endorsement endorsed"><i
+                            class="fa fa-plus"></i> <span>Endorse</span></a></div>
+                    <div class="skill_people">
+                        <ul>
+                            <li><img src="images/user_img.png"/></li>
+                            <li><img src="images/imgs.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                        </ul>
+                        <a href="#" class="more_endorsement" data-toggle="modal" data-target=".endorsement_modal">+<span
+                                class="endorsement_count">15</span> more</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 endorsement_item">
+                    <div class="brdr"></div>
+                    <div class="skill_name"><span class="skill_span">HTML 5</span> <a href="#" class="add_endorsement endorsed">
+                        <i class="fa fa-plus"></i> <span>Endorse</span></a></div>
+                    <div class="skill_people">
+                        <ul>
+                            <li><img src="images/user_img.png"/></li>
+                            <li><img src="images/imgs.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                        </ul>
+                        <a href="#" class="more_endorsement" data-toggle="modal" data-target=".endorsement_modal">+<span
+                                class="endorsement_count">15</span> more</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 endorsement_item">
+                    <div class="brdr"></div>
+                    <div class="skill_name"><span class="skill_span">HTML 5</span> <a href="#" class="add_endorsement endorsed">
+                        <i class="fa fa-plus"></i> <span>Endorse</span></a></div>
+                    <div class="skill_people">
+                        <ul>
+                            <li><img src="images/user_img.png"/></li>
+                            <li><img src="images/imgs.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                        </ul>
+                        <a href="#" class="more_endorsement" data-toggle="modal" data-target=".endorsement_modal">+<span
+                                class="endorsement_count">15</span> more</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 endorsement_item">
+                    <div class="brdr"></div>
+                    <div class="skill_name"><span class="skill_span">HTML 5</span> <a href="#" class="add_endorsement endorsed">
+                        <i class="fa fa-plus"></i> <span>Endorse</span></a></div>
+                    <div class="skill_people">
+                        <ul>
+                            <li><img src="images/user_img.png"/></li>
+                            <li><img src="images/imgs.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                        </ul>
+                        <a href="#" class="more_endorsement" data-toggle="modal" data-target=".endorsement_modal">+<span
+                                class="endorsement_count">15</span> more</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 endorsement_item">
+                    <div class="brdr"></div>
+                    <div class="skill_name"><span class="skill_span">HTML 5</span> <a href="#" class="add_endorsement endorsed">
+                        <i class="fa fa-plus"></i><span>Endorse</span></a></div>
+                    <div class="skill_people">
+                        <ul>
+                            <li><img src="images/user_img.png"/></li>
+                            <li><img src="images/imgs.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                        </ul>
+                        <a href="#" class="more_endorsement" data-toggle="modal" data-target=".endorsement_modal">+<span
+                                class="endorsement_count">15</span> more</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 endorsement_item">
+                    <div class="brdr"></div>
+                    <div class="skill_name"><span class="skill_span">HTML 5</span> <a href="#" class="add_endorsement endorsed">
+                        <i class="fa fa-plus"></i> <span>Endorse</span></a></div>
+                    <div class="skill_people">
+                        <ul>
+                            <li><img src="images/user_img.png"/></li>
+                            <li><img src="images/imgs.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                            <li><img src="images/user_defualt_img.jpg"/></li>
+                        </ul>
+                        <a href="#" class="more_endorsement" data-toggle="modal" data-target=".endorsement_modal">+<span
+                                class="endorsement_count">15</span> more</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="modal fade  endorsement_modal" tabindex="-1" role="dialog" aria-labelledby="certificate">
+                <div class="modal-dialog ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Endorsers</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row endosers_cont">
+                                <div class="col-lg-12 endosers_item">
+                                    <div class="col-lg-2"><img src="images/user_img.png"/></div>
+                                    <div class="col-lg-10">
+                                        <h3><a href="profile.html">Nadeem Bakhash</a></h3>
+                                        <h5>Job Title</h5>
+                                        <h5>Second Job Title</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 endosers_item">
+                                    <div class="col-lg-2"><img src="images/user_img.png"/></div>
+                                    <div class="col-lg-10">
+                                        <h3><a href="profile.html">Nadeem Bakhash</a></h3>
+                                        <h5>Job Title</h5>
+                                        <h5>Second Job Title</h5>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 endosers_item">
+                                    <div class="col-lg-2"><img src="images/user_img.png"/></div>
+                                    <div class="col-lg-10">
+                                        <h3><a href="profile.html">Nadeem Bakhash</a></h3>
+                                        <h5>Job Title</h5>
+                                        <h5>Second Job Title</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 endosers_item">
+                                    <div class="col-lg-2"><img src="images/user_img.png"/></div>
+                                    <div class="col-lg-10">
+                                        <h3><a href="profile.html">Nadeem Bakhash</a></h3>
+                                        <h5>Job Title</h5>
+                                        <h5>Second Job Title</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 endosers_item">
+                                    <div class="col-lg-2"><img src="images/user_img.png"/></div>
+                                    <div class="col-lg-10">
+                                        <h3><a href="profile.html">Nadeem Bakhash</a></h3>
+                                        <h5>Job Title</h5>
+                                        <h5>Second Job Title</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 endosers_item">
+                                    <div class="col-lg-2"><img src="images/user_img.png"/></div>
+                                    <div class="col-lg-10">
+                                        <h3><a href="profile.html">Nadeem Bakhash</a></h3>
+                                        <h5>Job Title</h5>
+                                        <h5>Second Job Title</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 endosers_item">
+                                    <div class="col-lg-2"><img src="images/user_img.png"/></div>
+                                    <div class="col-lg-10">
+                                        <h3><a href="profile.html">Nadeem Bakhash</a></h3>
+                                        <h5>Job Title</h5>
+                                        <h5>Second Job Title</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 endosers_item">
+                                    <div class="col-lg-2"><img src="images/user_img.png"/></div>
+                                    <div class="col-lg-10">
+                                        <h3><a href="profile.html">Nadeem Bakhash</a></h3>
+                                        <h5>Job Title</h5>
+                                        <h5>Second Job Title</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 endosers_item">
+                                    <div class="col-lg-2"><img src="images/user_img.png"/></div>
+                                    <div class="col-lg-10">
+                                        <h3><a href="profile.html">Nadeem Bakhash</a></h3>
+                                        <h5>Job Title</h5>
+                                        <h5>Second Job Title</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 endosers_item">
+                                    <div class="col-lg-2"><img src="images/user_img.png"/></div>
+                                    <div class="col-lg-10">
+                                        <h3><a href="profile.html">Nadeem Bakhash</a></h3>
+                                        <h5>Job Title</h5>
+                                        <h5>Second Job Title</h5>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>

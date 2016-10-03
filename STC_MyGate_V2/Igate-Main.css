@@ -1,0 +1,275 @@
+﻿@media all and (min-width:1200px) {
+   
+    .iconSet1 {
+        margin: 30px 0 0 0;
+        float: left;
+    }
+
+    .icon {
+        margin: 0 10px;
+        float: left;
+        position: relative;
+        cursor: pointer;
+    }
+
+        .icon > span {
+            background-color: #da4281;
+            color: #fff;
+            font-size: 12px;
+            border-radius: 100px;
+            padding: 4px 7px 2px 7px;
+            display: block;
+            position: absolute;
+            top: -10px;
+            right: -13px;
+            cursor: pointer;
+        }
+
+    .icon1 {
+        background-image: url(images/icon1.png);
+        width: 24px;
+        height: 18px;
+        position: relative;
+    }
+
+    .icon2 {
+        background-image: url(images/icon2.png);
+        width: 18px;
+        height: 18px;
+        position: relative;
+    }
+
+    .icon3 {
+        background-image: url(images/icon3.png);
+        width: 22px;
+        height: 18px;
+        position: relative;
+    }
+
+    .icon4 {
+        background-image: url(images/icon4.png);
+        width: 10px;
+        height: 18px;
+    }
+
+    .icon5 {
+        background-image: url(images/icon5.png);
+        width: 20px;
+        height: 18px;
+    }
+
+    .icon6 {
+        background-image: url(images/replay.png);
+        width: 16px;
+        height: 16px;
+    }
+
+    .icon7 {
+        background-image: url(images/replayAll.png);
+        width: 16px;
+        height: 16px;
+    }
+
+    .icon8 {
+        background-image: url(images/forward.png);
+        width: 16px;
+        height: 16px;
+    }
+
+    .searchSet {
+        margin: 20px 10px 0 20px;
+        float: left;
+    }
+
+        .searchSet > input {
+            border: solid 1px #dadada;
+            padding: 7px 10px;
+            background-image: url(images/searchIcon.png);
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            width: 150px;
+        }
+
+    .iconSet2 {
+        float: left;
+        margin: 25px 0 0 0;
+    }
+
+
+
+
+    .profileBox {
+        text-align: center;
+        padding-bottom: 20px;
+        max-width: 95%;
+    }
+
+        .profileBox > img {
+            border-radius: 110px;
+            margin: 20px auto 15px auto;
+            width: 70%;
+        }
+
+    .welcome {
+        color: #848182;
+        font-size: 13px;
+        text-align: left;
+        padding-left: 50px;
+    }
+
+    .name {
+        color: #484646;
+        font-size: 16px;
+        text-align: left;
+        padding-left: 50px;
+    }
+
+  
+    }
+
+    .position {
+        border-left: solid 7px #471c67;
+        margin-left: 10px;
+        font-size: 14px;
+        margin-top: 20px;
+        text-align: left;
+    }
+
+        .position > .line1 {
+            color: #231f20;
+            padding-left: 10px;
+        }
+
+        .position > .line2 {
+            color: #717171;
+            padding-left: 10px;
+        }
+
+   
+}
+
+
+ .homeIcon {
+	        padding-top: 0;
+	    }
+	
+	        .homeIcon:hover {
+	            border-bottom: none;
+	            opacity: 0.8;
+	        }
+	
+	    .iconSet1 {
+	        margin: 15px 0 0 0;
+	        float: left;
+	    }
+	
+	    .icon {
+	        margin: 0 10px;
+	        float: left;
+	        position: relative;
+	        cursor: pointer;
+	    }
+	
+	        .icon > span {
+	            background-color: #DA3F7B;
+	            color: #fff;
+	            font-size: 12px;
+	            border-radius: 100px;
+	            padding: 4px 7px 2px 7px;
+	            display: block;
+	            position: absolute;
+	            top: -10px;
+	            right: -13px;
+	            cursor: pointer;
+	        }
+	
+	    .icon1 {
+	        background-image: url(images/icon1.png);
+         background-repeat: no-repeat;
+	        width: 25px;
+	        height: 25px;
+	        position: relative;
+	    }
+	
+	    .icon2 {
+	        background-image: url(images/icon2.png);
+         background-repeat: no-repeat;
+	        width: 25px;
+	        height: 25px;
+	        position: relative;
+	    }
+	
+	    .icon3 {
+	        background-image: url(images/icon3.png);
+         background-repeat: no-repeat;
+	        width: 25px;
+	        height: 25px;
+	        position: relative;
+	    }
+	
+	    .icon4 {
+	        background-image: url(images/icon4.png);
+         background-repeat: no-repeat;
+	        width: 10px;
+	        height: 18px;
+	    }
+	
+	    .icon5 {
+	        background-image: url(images/icon5.png);
+         background-repeat: no-repeat;
+	        width: 25px;
+	        height: 25px;
+	    }
+	
+	    .icon6 {
+	        background-image: url(images/replay.png);
+	        width: 16px;
+	        height: 16px;
+	    }
+	
+	    .icon7 {
+	        background-image: url(images/replayAll.png);
+	        width: 16px;
+	        height: 16px;
+	    }
+	
+	    .icon8 {
+	        background-image: url(images/forward.png);
+	        width: 16px;
+	        height: 16px;
+	    }
+	
+	    .searchSet {
+	        margin: 10px 10px 0 20px;
+	        float: right;
+	    }
+	
+	        .searchSet input {
+	            border: solid 1px #dadada;
+	            padding: 7px 10px;
+	            background-image: url(images/searchIcon.png);
+	            background-repeat: no-repeat;
+	            background-position: 95% 12px;
+	            background-position: right 10px center;
+	            width: 150px;
+	       height:32px;
+	        }
+	
+	    .iconSet2 {
+	        float: right;
+	        margin: 15px 0 0 0;
+	    }
+	
+	
+
+  
+  @media (max-width: 992px){
+.container {
+    width: 100%!important;
+}
+
+
+  }
+
+
+

@@ -1,0 +1,58 @@
+#tag-cloud {
+    margin-left: 0;
+    -webkit-padding-start: 0;
+}
+.tag-cloud {
+    background-color: #999999;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #818181;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 10.844px;
+    line-height: 21px;
+    margin: 2px 3px 2px 2px;
+    padding: 1px 6px 2px;
+    vertical-align: baseline;
+}
+.tag-cloud:after {
+    color: #fff;
+    content: " \f00c";
+    font-size: 7px;
+    position: relative;
+    top: 0px;
+    width: 12px;
+    height: 12px;
+    background: #702c81;
+    border-radius: 50%;
+    display: inline-block;
+    left: 2px;
+    font-family: FontAwesome;
+    line-height: 12px;
+    text-align: center;
+    padding-top: 1px;
+}
+
+/* Colors */
+
+.tag-cloud.tag-cloud-info {
+    background-color: #f3f3f3;
+}
+.tag-cloud.tag-cloud-success {
+    background-color: #8bc981;
+    color: #fff;
+}
+.tag-cloud.tag-cloud-success:after {
+
+    display:none
+}
+.tag-cloud.tag-cloud-warning {
+    background-color: #F89406;
+}
+.tag-cloud.tag-cloud-danger {
+    background-color: #B94A48;
+}
+.tag-cloud.tag-cloud-inverse {
+    background-color: #333333;
+}

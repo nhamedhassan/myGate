@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>MyGate Dashboard</title>
+<link rel="stylesheet" href="css/datatables.css">
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="stylesheet" href="css/simple-line-icons.css"/>
+
+<link rel="stylesheet" href="css/animate.css"/>
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/owl.theme.css">
+<link rel="stylesheet" href="css/ion.rangeSlider.css"/>
+<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css"/>
+<link rel="stylesheet" href="css/main.css"/>
+<link rel="stylesheet" href="css/samak_css.css"/>
+<link rel="stylesheet" href="Igate-Main.css"/>
+<link rel="stylesheet" href="css/karim.css"/>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="js/datatables.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+
+<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+
+<!-- ION Range slider -->
+<script src="js/ion.rangeSlider.min.js" type="text/javascript"></script>
+
+<!--Gauge charts  -->
+<script src="js/gauge.min.js" type="text/javascript"></script>
+<script src="js/gauge_charts.js" type="text/javascript"></script>
+<!-- animation -->
+
+<script type="text/javascript" src="js/jquery.inview.js"></script>
+
+
+<!-- full calendar -->
+<link href='css/fullcalendar.css' rel='stylesheet' />
+<script src='js/moment.min.js'></script>
+<script src='js/fullcalendar.js'></script>
+
+
+<!-- bootstrap tagging system -->
+<script src="js/bootstrap-tag-cloud.js" type="text/javascript"></script>
+<link href='css/bootstrap-tag-cloud.css' rel='stylesheet' />
+
+
+
+
+
+<!-- Common script file -->
+<script src="js/scripts.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+    var jq_old = jQuery.noConflict(true);
+</script>
+<!--**************************** by karim ******************************************************-->
+
+
+
+
+
+ <script>
+     jq_old(document).ready(function () {
+
+
+    //stick in the fixed 100% height behind the navbar but don't wrap it
+    jq_old('#slide-nav.navbar .container').append(jq_old('<div id="navbar-height-col"></div>'));
+
+    // Enter your ids or classes
+    var toggler = '.navbar-toggle';
+    var pagewrapper = '#page-content';
+    var navigationwrapper = '.navbar-header';
+    var menuwidth = '100%'; // the menu inside the slide menu itself
+    var slidewidth = '80%';
+    var menuneg = '-100%';
+    var slideneg = '-80%';
+
+
+    jq_old("#slide-nav").on("click", toggler, function (e) {
+
+        var selected = $(this).hasClass('slide-active');
+
+        jq_old('#slidemenu').stop().animate({
+            left: selected ? menuneg : '0px'
+        });
+
+        jq_old('#navbar-height-col').stop().animate({
+            left: selected ? slideneg : '0px'
+        });
+
+        jq_old(pagewrapper).stop().animate({
+            left: selected ? '0px' : slidewidth
+        });
+
+        jq_old(navigationwrapper).stop().animate({
+            left: selected ? '0px' : slidewidth
+        });
+
+
+        jq_old(this).toggleClass('slide-active', !selected);
+        jq_old('#slidemenu').toggleClass('slide-active');
+
+
+        jq_old('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
+
+
+    });
+
+
+    var selected = '#slidemenu, #page-content, body, .navbar, .navbar-header';
+
+
+    jq_old(window).on("resize", function () {
+
+        if (jq_old(window).width() > 767 && jq_old('.navbar-toggle').is(':hidden')) {
+            jq_old(selected).removeClass('slide-active');
+        }
+
+
+    });
+
+
+
+
+});
+
+    </script>
+
+
+</head>
+<body>
+<header class="navbar navbar-inverse mobile-j top-main " role="navigation" id="slide-nav"   style="background-color:#fff;">
+  <div class="container border-top">
+
+   <div class="navbar-header">
+    <a class="navbar-toggle">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+     </a>
+    <a class="navbar-brand stc_logo icon-scroll"  href="http://www.stc.com.sa" >
+    </a>
+   </div> 
+
+   <div id="slidemenu"  class="top_menu">
+
+          <form class="navbar-form navbar-right color-icon-top" role="form">
+            <div class="iconSet1 ">
+                    <div class="icon dash dropdown dashline"  id="appSwitcher">
+                    <a  href="#" dropdown-toggle"  data-toggle="dropdown">
+                        <i class="fa fa-th fa-2x" aria-hidden="true"></i>
+                        <span class="caret"></span>
+</a>
+
+<ul class="dropdown-menu" data-dropdown-in="flipInY" data-dropdown-out="flipOutY">
+    <li><a href="#">HTML <div class="task-icon badge badge-success"><i class="icon-energy"></i>
+                                                                </div></a> </li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+                    </div>
+
+                   <div class="icon dash dropdown icon-notfi  icon-scroll"  id="appSwitcher">
+                    <a  href="#" dropdown-toggle"  data-toggle="dropdown">
+                      <i class="fa fa-bell fa-2x" aria-hidden="true"></i>
+                       <span class="caret"></span>
+</a>
+<ul class="dropdown-menu" data-dropdown-in="flipInY" data-dropdown-out="flipOutY">
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+   <span id="notificationSpan">2</span>
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="searchSet">
+                   <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+      </span>
+
+
+    </div>
+
+<div class="icon dash dropdown icon-notfi  icon-top-user"  id="appSwitcher">
+                    <a  href="#" dropdown-toggle"  data-toggle="dropdown">
+                      <img src="images/imgs.jpg">
+                       <span class="caret"></span>
+</a>
+<ul class="dropdown-menu" > 
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+
+                    </div>
+                </div>
+
+
+
+          </form>
+
+    <ul id="MainMenu" class="nav navbar-nav " >
+
+
+    <li class="dropdown open"> <a href="" class="dropdown-toggle " data-toggle="dropdown">My Gate <br/><i class="fa fa-caret-down" aria-hidden="true"></i></a>
+
+     <ul class="dropdown-menu topMenu">
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Inbox</a></li>
+      <li><a href="#"> Profile</a></li>
+
+       <li><a href="#">Team</a></li>
+      <li><a href="#">Attendance</a></li>
+      <li><a href="#"> Vacation</a></li>
+
+       <li><a href="#">My Family</a></li>
+      <li><a href="#">Calender</a></li>
+      <li><a href="#">training </a></li>
+
+       <li><a href="#">Email</a></li>
+      <li><a href="#">One Drive</a></li>
+
+    </ul>
+
+     </li>
+
+    <li  class="dropdown"> <A href="#">E Services</A> </li>
+    <li  class="dropdown"> <A href="#">Al-Diwaniyah</A> </li>
+
+  </ul>
+
+   </div>
+  </div>
+ </header>
+
+
+ 
+<div class="container">
+    <div class="row">
+     <br class="clearfix" /> 
+         <div class="col-lg-12 col-md-12 col-sm-12" >
+         <div class="white_bg">
+         <div class="row top_bottom_brdr animated fadeInUp" data-animation="fadeInUp">
+         
+        
+        
+           <div class="col-lg-12" style="padding-top:20px;">
+             <div>
+              <div class="col-lg-6 col-sm-12" > <h3> <span>3</span> Dependance</h3></div>
+
+              <div class="col-lg-6 col-sm-12">
+
+                <div class="col-lg-4 col-sm-4 col-sx-12 ">
+              <input type="button" class="dropdown_results size34 width100 border_pink" value="View Hospitals Directory">
+                 </div>
+
+                 <div class="col-lg-4 col-sm-4 col-sx-12 ">
+              <input type="button" class="dropdown_results  size34 width100 border_pink" value="Add Dependant">
+                </div>
+
+                <div class="col-lg-4 col-sm-4 col-sx-12">
+              <input type="button" class="dropdown_results  size34 width100 border_pink" value="Updtae Dependants">
+               </div>
+
+              </div>
+               <table class="table stcFont"  id="miyazaki">
+                 <thead>
+                   <tr>
+                     <th>Dependent </th>
+                     <th>Relation</th>
+                     <th>Date Of Birth</th>
+                     <th>ID</th>
+                     <th>Medical</th>
+                     <th>Education</th>
+                     <th>Comments</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr>
+                     <td>Mark</td>
+                     <td>Otto</td>
+                     <td>@mdo</td>
+                     <td>553344555</td>
+                     <td>                   <div class="dropdown">
+  <a href="#" id="popoverOption"  class=" dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"><i class="fa fa-check-circle txtGreen"></i></a>
+  <div class="dropdown-menu sub-menu new-style" data-dropdown-in="flipInX" data-dropdown-out="flipOutX"> 
+<div class="col-lg-12 id-info icon-dec">
+<h3><strong>Example heading</strong></h3>
+
+
+  <div class="col-lg-12">
+
+
+
+<ul class="list-group2">
+  <li><span>National ID</span> 2352545875</li>
+
+  <li><span>Policy number</span> GRT2352545875</li>
+
+
+  <li><span>Class </span> VIP</li>
+  <li><span>Company </span> STC</li>
+  <li><span>Cover </span> 20%</li>
+  
+
+</ul>
+
+
+ <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " ><br/>
+                                               <a href="#" class="btn btn-Tertiary full_width_btn more-de">Training</a>
+                                       </div>
+
+
+  </div>
+
+
+
+
+</div>
+  </div>
+</div>
+
+</td>
+                     <td><i class="fa fa-check-circle"></i></td>
+                     <td><i class="fa fa-check-circle"></i></td>
+                   </tr>
+                   <tr>
+                     <td>Jacob</td>
+                     <td>Thornton</td>
+                     <td>@fat</td>
+                     <td>665555666</td>
+                     <td>
+                    <div class="dropdown">
+  <a href="#" id="popoverOption"  class=" dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"><i class="fa fa-check-circle txtGreen"></i></a>
+  <div class="dropdown-menu sub-menu new-style" data-dropdown-in="flipInX" data-dropdown-out="flipOutX"> 
+<div class="col-lg-12 id-info icon-dec">
+<h3><strong>Example heading</strong></h3>
+
+
+  <div class="col-lg-12">
+
+<ul class="list-group2">
+  <li><span>National ID</span> 2352545875</li>
+
+  <li><span>Policy number</span> GRT2352545875</li>
+
+
+  <li><span>Class </span> VIP</li>
+  <li><span>Company </span> STC</li>
+  <li><span>Cover </span> 20%</li>
+  
+
+</ul>
+
+
+ <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " ><br/>
+                                               <a href="#" class="btn btn-Tertiary full_width_btn more-de">Training</a>
+                                       </div>
+  </div>
+
+</div>
+  </div>
+</div>
+                     </td>
+                     <td>Not Eligible</td>
+                     <td>
+                     
+                     
+                     </td>
+                   </tr>
+                   <tr>
+                     <td>Larry</td>
+                     <td>the Bird</td>
+                     <td>@twitter</td>
+                     <td>6655566677</td>
+                     <td><div class="dropdown">
+  <a href="#" id="popoverOption"  class=" dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"><i class="fa fa-check-circle txtGreen"></i></a>
+  <div class="dropdown-menu sub-menu new-style" data-dropdown-in="flipInX" data-dropdown-out="flipOutX"> 
+<div class="col-lg-12 id-info icon-dec">
+<h3><strong>Example heading</strong></h3>
+
+
+  <div class="col-lg-12">
+
+<ul class="list-group2">
+  <li><span>National ID</span> 2352545875</li>
+
+  <li><span>Policy number</span> GRT2352545875</li>
+
+
+  <li><span>Class </span> VIP</li>
+  <li><span>Company </span> STC</li>
+  <li><span>Cover </span> 20%</li>
+  
+
+</ul>
+
+
+ <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " ><br/>
+                                               <a href="#" class="btn btn-Tertiary full_width_btn more-de">Training</a>
+                                       </div>
+
+
+  </div>
+
+</div>
+  </div>
+</div></td>
+                     <td><i class="fa fa-check-circle txtGreen"></i>&nbsp;eligible</td>
+                     <td>
+                
+                     </td>
+                   </tr>
+                 </tbody>
+               </table>
+
+
+             </div>
+
+
+
+          
+             
+             <div>Education plan will cover 3 of your childern <span>(<a href="#">sample rule</a>)</span></div>
+           </div>
+
+         
+         
+         </div>
+         </div>
+         
+      
+
+      
+
+
+         
+         </div>
+
+        
+    </div>
+
+  
+
+
+
+</div>
+<script type="text/javascript">
+$('#popoverOption').popover({ trigger: "hover" });
+</script>
+
+
+    <script type="text/javascript">
+        var headertext = [],
+headers = document.querySelectorAll("#miyazaki th"),
+tablerows = document.querySelectorAll("#miyazaki th"),
+tablebody = document.querySelector("#miyazaki tbody");
+
+for(var i = 0; i < headers.length; i++) {
+  var current = headers[i];
+  headertext.push(current.textContent.replace(/\r?\n|\r/,""));
+} 
+for (var i = 0, row; row = tablebody.rows[i]; i++) {
+  for (var j = 0, col; col = row.cells[j]; j++) {
+    col.setAttribute("data-th", headertext[j]);
+  } 
+}
+
+        
+    </script>
+    <script src="js/tutorial.js"></script> 
+
+</body>
+</html>
